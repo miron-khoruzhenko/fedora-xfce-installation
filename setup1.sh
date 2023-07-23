@@ -74,6 +74,18 @@ echo -e '\n\nInstalling Telegram ... \n'
 echo $password | sudo -S snap install telegram-desktop
 wait
 
+# Install Notion
+echo -e '\n\nInstalling Notion ... \n'
+
+echo $password | sudo -S snap install notion-snap-reborn
+wait
+
+# Install Trello
+echo -e '\n\nInstalling Trello ... \n'
+
+echo $password | sudo -S snap install trello-desktop
+wait
+
 # Install NodeJS
 echo -e '\n\nInstalling nodejs ... \n'
 
@@ -81,12 +93,16 @@ echo $password | sudo -S dnf install -y nodejs
 wait
 
 # Install pip
-echo -e '\n\nInstalling nodejs ... \n'
-nodejsl
+echo -e '\n\nInstalling pip ... \n'
+
 echo $password | sudo -S dnf install -y pip
 wait
 
+# Install Audio and Video decoder plugin
+echo -e '\n\nInstalling mmpeg ... \n'
 
+echo $password | sudo -S dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
+wait
 
 clear
 

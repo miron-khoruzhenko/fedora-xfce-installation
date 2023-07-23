@@ -51,8 +51,8 @@ echo $password | sudo -S dnf install -y sassc
 wait
 
 # TODO: Добавь возможность пропустить
-# cd /tmp && git clone https://github.com/vinceliuice/Graphite-gtk-theme.git Graphite && cd Graphite && /bin/bash ./install.sh -c dark -t purple && cd /tmp && rm -rf Graphite
-# wait
+cd /tmp && git clone https://github.com/vinceliuice/Graphite-gtk-theme.git Graphite && cd Graphite && /bin/bash ./install.sh -c dark -t purple  && cd /tmp && rm -rf Graphite
+wait
 
 # Установка темы для курсора
 echo $password | sudo -S cp -r $script_path/src/OreoPurple /usr/share/icons
