@@ -60,6 +60,12 @@ wait
 echo $password | sudo -S ln -s /var/lib/snapd/snap /snap
 wait
 
+# Install Zoxide
+
+echo $password | sudo -S dnf install -y zoxide
+wait
+
+
 # Install VSCode
 echo -e '\n\nInstalling VSCode ... \n'
 
@@ -103,6 +109,8 @@ echo -e '\n\nInstalling mmpeg ... \n'
 
 echo $password | sudo -S dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
 wait
+
+
 
 clear
 
